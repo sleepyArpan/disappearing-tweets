@@ -1,5 +1,23 @@
+@import '~antd/dist/antd.css';
 .container {
   min-height: 100vh;
 }
 
-@import '~antd/dist/antd.css';
+.nav-footer {
+  background-color: #d1cbca;
+  text-align: center;
+  font-size: large;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}

@@ -1,27 +1,16 @@
 import React from 'react';
-import { Layout, Typography } from 'antd';
+import { Layout } from 'antd';
+import Tweets from './Tweets';
 
 function Container() {
   const { Header, Content, Footer } = Layout;
-  const { Title } = Typography;
   return (
-    <Layout style={{ minHeight: '100vh', maxWidth: '1200px' }}>
-      <Header style={{ color: 'whitesmoke', textAlign: 'center' }}>
-        Header
-      </Header>
-      <Content
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          maxWidth: '100%',
-        }}>
-        <Title>Content</Title>
+    <Layout className='container'>
+      <Header className='nav-footer'>Disappearing Tweets</Header>
+      <Content className='content'>
+        <Tweets />
       </Content>
-      <Footer style={{ background: 'gray', textAlign: 'center' }}>
-        Footer
-      </Footer>
+      <Footer className='nav-footer'>Footer</Footer>
     </Layout>
   );
 }
