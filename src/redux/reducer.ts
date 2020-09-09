@@ -1,7 +1,7 @@
-import { ACTION } from './actions';
+import { ACTION, ADD_TWEET, TweetDescription } from './actions';
 
 export interface TweetState {
-  tweets: string[];
+  tweets: TweetDescription[];
 }
 
 const initialState = {
@@ -13,7 +13,7 @@ export function reducer(
   action: ACTION
 ): TweetState {
   switch (action.type) {
-    case 'ADD_TWEET':
+    case ADD_TWEET:
       return {
         ...state,
         tweets: [...state.tweets, action.payload],
