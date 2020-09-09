@@ -17,7 +17,10 @@ function TweetInput({ addTweet }: TweetInputProps) {
     setTweet(e.target.value);
   }
 
-  function addTweetHandler() {
+  function addTweetHandler(): void {
+    if (tweet === '' || date === null || time === null) {
+      return;
+    }
     const storeTweet = { tweet, date, time };
     addTweet(storeTweet);
     setTweet('');
@@ -47,11 +50,11 @@ function TweetInput({ addTweet }: TweetInputProps) {
     return minutes;
   }
 
-  function handleDateChange(date: Moment | null): void {
+  function handleDateChange(date: Moment | null) {
     setDate(date);
   }
 
-  function handleTimeChange(time: Moment | null): void {
+  function handleTimeChange(time: Moment | null) {
     setTime(time);
   }
 
