@@ -1,9 +1,10 @@
 import React from 'react';
+import { Moment } from 'moment';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { TweetState } from '../redux/reducer';
 import { TweetDescription } from '../redux/actions';
-import { addTweet } from '../redux/actions';
+import { addTweet, deleteTweet } from '../redux/actions';
 import TweetInput from './TweetInput';
 import Tweet from './Tweet';
 
@@ -17,11 +18,19 @@ function Tweets() {
     dispatch(addTweet(tweet));
   }
 
+  function onTweetDelete(time: Moment) {
+    dispatch(deleteTweet(time));
+  }
+
   return (
     <>
       <TweetInput addTweet={onTweetAdd} />
       {tweets.map(tweet => (
-        <Tweet key={tweet.time?.format('YYYY MM dd')} tweet={tweet} />
+        <Tweet
+          key={tweet.time?.format('YYYY MM dd')}
+          tweet={tweet}
+          deleteTweet={onTweetDelete}
+        />
       ))}
     </>
   );

@@ -21,6 +21,8 @@ function TweetInput({ addTweet }: TweetInputProps) {
     const storeTweet = { tweet, date, time };
     addTweet(storeTweet);
     setTweet('');
+    setDate(null);
+    setTime(null);
   }
 
   function disabledDate(current: Moment): boolean {
