@@ -1,5 +1,5 @@
 import React from 'react';
-import { Moment } from 'moment';
+import moment, { Moment } from 'moment';
 import { TweetDescription } from '../redux/types';
 import { Button, Card } from 'antd';
 
@@ -9,6 +9,18 @@ interface TweetProps {
 }
 
 function Tweet({ tweet, deleteTweet }: TweetProps) {
+  React.useEffect(() => {
+    setInterval(() => {
+      if (tweet.time?.format('YYYY MM DD') === moment().format('YYYY MM DD')) {
+        if (tweet.time.hours() === moment().hours()) {
+          if (tweet.time.minutes() === moment().minutes()) {
+            deleteTweet(tweet.time);
+          }
+        }
+      }
+    }, 1000);
+  }, [deleteTweet, tweet.time]);
+
   return (
     <Card style={{ width: 300 }}>
       <p>{tweet.tweet}</p>

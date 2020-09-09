@@ -68,9 +68,6 @@ function TweetInput({ addTweet }: TweetInputProps) {
           className='input-area'
           onChange={onTweetChange}
         />
-        <Button onClick={addTweetHandler} type='primary'>
-          Tweet
-        </Button>
       </div>
       <div className='flex'>
         <DatePicker
@@ -87,6 +84,9 @@ function TweetInput({ addTweet }: TweetInputProps) {
           hideDisabledOptions
         />
       </div>
+      <Button onClick={addTweetHandler} type='primary'>
+        Tweet
+      </Button>
     </>
   );
 }
