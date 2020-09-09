@@ -10,7 +10,16 @@ function Container() {
       <Content className='content'>
         <Tweets />
       </Content>
-      <Footer className='nav-footer'>Footer</Footer>
+      <Footer className='nav-footer'>
+        Made by{' '}
+        <a
+          href='https://github.com/sleepyArpan/disappearing-tweets'
+          target='_blank'
+          rel='noopener noreferrer'>
+          Arpan Chattopadhyay
+        </a>{' '}
+        using React, Redux, TypeScript and Ant Design.
+      </Footer>
     </Layout>
   );
 }
