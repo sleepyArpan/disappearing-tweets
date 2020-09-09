@@ -60,7 +60,7 @@ function TweetInput({ addTweet }: TweetInputProps) {
 
   return (
     <>
-      <div className='width-50'>
+      <div className='width-50 margin-4'>
         <Input.TextArea
           value={tweet}
           placeholder='Type in your tweet here'
@@ -69,7 +69,7 @@ function TweetInput({ addTweet }: TweetInputProps) {
           onChange={onTweetChange}
         />
       </div>
-      <div className='flex'>
+      <div className='flex margin-4'>
         <DatePicker
           size={'large'}
           disabledDate={disabledDate}

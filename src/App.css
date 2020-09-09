@@ -26,3 +26,11 @@
 .flex {
   display: flex;
 }
+
+.margin-4 {
+  margin: 1rem;
+}
+
+.margin-2 {
+  margin: 0.5rem;
+}

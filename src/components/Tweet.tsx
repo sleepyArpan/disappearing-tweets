@@ -22,7 +22,7 @@ function Tweet({ tweet, deleteTweet }: TweetProps) {
   }, [deleteTweet, tweet.time]);
 
   return (
-    <Card style={{ width: 300 }}>
+    <Card className='margin-2' style={{ width: 300 }}>
       <p>{tweet.tweet}</p>
       <p>Expiry Date and Time -</p>
       <p>
