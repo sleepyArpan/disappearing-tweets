@@ -1,8 +1,8 @@
-import { Input, Button, DatePicker, TimePicker } from 'antd';
 import moment, { Moment } from 'moment';
 import React, { ChangeEvent } from 'react';
+import { Input, Button, DatePicker, TimePicker } from 'antd';
 
-import { TweetDescription } from '../redux/actions';
+import { TweetDescription } from '../redux/types';
 
 interface TweetInputProps {
   addTweet(tweet: TweetDescription): void;

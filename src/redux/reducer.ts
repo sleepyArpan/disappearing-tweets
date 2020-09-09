@@ -1,11 +1,7 @@
 import { Moment } from 'moment';
-import {
-  deleteTweet,
-  addTweet,
-  ADD_TWEET,
-  DELETE_TWEET,
-  TweetDescription,
-} from './actions';
+
+import { ADD_TWEET, DELETE_TWEET } from './actions';
+import { TweetDescription, tweetTypes } from './types';
 
 export interface TweetState {
   tweets: TweetDescription[];
@@ -25,7 +21,7 @@ function filterTweets(state: TweetState, time: Moment): TweetState {
 
 export function reducer(
   state: TweetState = initialState,
-  action: addTweet | deleteTweet
+  action: tweetTypes
 ): TweetState {
   switch (action.type) {
     case ADD_TWEET:

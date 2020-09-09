@@ -1,6 +1,6 @@
 import React from 'react';
 import { Moment } from 'moment';
-import { TweetDescription } from '../redux/actions';
+import { TweetDescription } from '../redux/types';
 import { Button, Card } from 'antd';
 
 interface TweetProps {

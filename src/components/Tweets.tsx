@@ -3,7 +3,7 @@ import { Moment } from 'moment';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { TweetState } from '../redux/reducer';
-import { TweetDescription } from '../redux/actions';
+import { TweetDescription } from '../redux/types';
 import { addTweet, deleteTweet } from '../redux/actions';
 import TweetInput from './TweetInput';
 import Tweet from './Tweet';
