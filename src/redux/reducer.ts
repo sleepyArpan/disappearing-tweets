@@ -1,11 +1,7 @@
 import { Moment } from 'moment';
 
 import { ADD_TWEET, DELETE_TWEET } from './actions';
-import { TweetDescription, tweetTypes } from './types';
-
-export interface TweetState {
-  tweets: TweetDescription[];
-}
+import { tweetTypes, TweetState } from './types';
 
 const initialState = {
   tweets: [],

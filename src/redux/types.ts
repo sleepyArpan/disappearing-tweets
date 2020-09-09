@@ -7,6 +7,9 @@ export interface TweetDescription {
   date: Moment | null;
   time: Moment | null;
 }
+export interface TweetState {
+  tweets: TweetDescription[];
+}
 
 interface addTweet {
   type: typeof ADD_TWEET;
